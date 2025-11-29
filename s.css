@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+    overflow-x: hidden;
+}
+
+.split-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.info-panel {
+    width: 35%;
+    padding: 60px;
+    background-color: #0f0f0f;
+    background-image: radial-gradient(circle at top left, #1a1a1a, #0f0f0f);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 100px 5px rgba(255, 0, 85, 0.3);
+    position: relative;
+}
+
+.info-panel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 100%;
+
+    background: linear-gradient(to left,
+            rgba(255, 193, 204, 1),
+            rgba(255, 156, 174, 0.95),
+            rgba(255, 111, 159, 0)
+        );
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 0px #333;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.bullet-list {
+    list-style: none;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.bullet-list li:before {
+    content: "- ";
+    color: #666;
+}
+
+.faint {
+    color: #555;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.highlight-blue {
+    color: #a7adf3;
+    font-weight: bold;
+}
+
+.highlight-red {
+    color: #ff3333;
+    font-weight: bold;
+}
+
+.highlight-green {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+.section-block {
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.neon-pink {
+    color: #ff007f;
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+}
+
+.neon-green {
+    color: #00ff88;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+}
+
+.achievements-list {
+    list-style: none;
+}
+
+.achievements-list li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: white;
+    background: #222;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #333;
+    transition: 0.2s;
+}
+
+.social-link:hover {
+    transform: scale(1.05);
+    color: black;
+}
+
+.image-panel {
+    width: 65%;
+    background: #363636;
+    background: radial-gradient(circle, rgba(54, 54, 54, 1) 0%, rgba(230, 204, 204, 1) 50%, rgba(255, 193, 204, 1) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.floating-avatar {
+    width: 60%;
+    height: auto;
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.3));
+    background: #363636;
+    background: radial-gradient(circle, rgba(54, 54, 54, 1) 0%, rgba(230, 204, 204, 1) 50%, rgba(255, 193, 204, 1) 100%);
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease;
+}
+
+.floating-avatar:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+#discord-button {
+    background-color: #5865F2;
+    border-color: #4752C4;
+
+    width: 80px;
+    height: 45px;
+
+    background-image: url("Discord-Symbol-Light Blurple.png");
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    box-shadow: 0 0 10px rgba(88, 101, 242, 0.6);
+}
+
+#twitter-button {
+    background-color: rgb(24, 24, 24);
+    border-color: rgb(24, 24, 24);
+
+    width: 80px;
+    height: 45px;
+
+    background-image: url("twitter-logo.png");
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    box-shadow: 0 0 10px rgba(190, 190, 190, 0.6);
+}
+
+#roblox-button {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+
+    width: 80px;
+    height: 45px;
+
+    background-image: url("Roblox_Tilt_White.png");
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    box-shadow: 0 0 10px rgba(110, 110, 110, 0.6);
+}
+
+@media (max-width: 768px) {
+    .split-container {
+        flex-direction: column;
+    }
+
+    .info-panel,
+    .image-panel {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .info-panel {
+        border-right: none;
+        border-bottom: 4px solid #ff0055;
+    }
+
+    .image-panel {
+        height: 400px;
+    }
+}
