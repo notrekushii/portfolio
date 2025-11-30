@@ -238,4 +238,13 @@ h3 {
     .image-panel {
         height: 400px;
     }
+
+    .info-panel::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0px;
+        height: 100%;
+    }
 }
